@@ -1,0 +1,18 @@
+Came up with some questions and initial set of answers for now.
+
+
+1)    How did you arrive at this solution for the requirements?
+
+Ans: We closely considered the requirements, experimented with the various techniques and evaluated the results. After some testing, we had ascertained that the current technique provided acceptable performance and we went with it.
+
+2)      How will the business benefit from this system?
+
+Ans: The demo asset provides invaluable value to the company and there is a need to protect it from tampering by unauthorized tampering and damage. Such consequence will lead to unnecessary downtime and lost opportunity to showcase it to prospects. This system provides the protection so as to avoid such downtime and loss.
+
+3)      What are the main challenges you have faced in this project?
+
+Ans: The main challenges is setting up the appropriate Anaconda environment to do the testing. Especially with Tensorflow library, some problems were encountered due mostly to version issues. Then there were issues with long training runs before we could make each round of tweaks to our algorithms.
+
+4)      What are the skills you have learnt from your Masters course that you have applied to this project?
+
+Ans: The main skill that we had learnt and applied are the Deep Learning techniques.

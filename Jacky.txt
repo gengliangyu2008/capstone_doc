@@ -1,0 +1,56 @@
+Adding more Q&A
+
+Implementation
+
+(A) Intruder Detection by Background Subtraction: OpenCV 
+
+Overview: Detect movement in webcam video through the Background Subtraction method. Any detected movement will be display in white against a black background.
+
+Background Initialisation – compute an initial model of the background
+Generate the foreground mask using the cv::BackgroundSubtractor object
+Read the video stream images sequence using the cv::VideoCapture
+
+Background Update – update model in order to adapt to possible changes in the scene
+Each frame currently calculate the foreground mask and updating the background
+Results of the updated video stream is displayed
+
+Model = Gaussian mixture model
+
+(B) Intruders Alert: Twilio
+
+1.Communication API for SMS
+2.It works in the background to bridge the gap between web-based applications and telephones
+3.Application-initiated event - initiated via Twilio's public REST API
+4.In our case, our python script send an HTTP request to Twilio’s API to send a text message from the application's phone number to a recipient phone number, with a message containing the alert
+
+Which Concepts were Applied
+
+(A) Intruder Detection by Background Subtraction
+
+Application of Statistical Signal Classification by Expectation Maximisation
+~ Pattern Recognition System, Dr Tian Jing, Statistical Signal Processing
+
+Knowledge & Understanding - fundamentals of statistical signal processing, learning distribution from signal, and statistical classification 
+
+(B) Intruders Alert: Twilio
+
+Application of Intelligent Software Agents (API) 
+~ Intuited from Cloud AI Workshop (Google Cloud), Sam Gu   
+
+Knowledge & Understanding - API: a software intermediary that allows two applications to talk to each other. In other words, an API is the messenger that delivers your request to the provider that you're requesting it from and then delivers the response back to you
+
+Design & Built Considerations
+Simple
+Robust
+Flexible
+(A) Intruder Detection by Background Subtraction
+
+Simple - only need OpenCV & Numpy package, about 20 lines of codes
+Robust - minimal noises, unaffected by gradual illumination change, can account for shadow
+Flexible - not required to perform prior mapping of "virtual" lines or detection areas with each deployment
+
+(B) Intruders Alert: Twilio
+
+Simple - API call to request service, only need twilio package, less than 10 lines of codes
+Robust - twilio handles ever-changing telecom logic and carrier specific rules to ensure message reaches its destination
+Flexible - can change the message content and recipient easily
